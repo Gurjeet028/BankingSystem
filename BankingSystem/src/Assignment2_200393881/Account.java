@@ -1,20 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Assignment2_200393881;
+
+package Assignment2_200506074;
 
 import com.sun.xml.internal.ws.commons.xmlutil.Converter;
 
 /**
  *
- * @author pujan
+ * @author Gurjeet
  */
 public class Account {
  
     
-    //Variable declared for Account Class
+    // Account Class variables
     
     private String AccountNumber;
     private double AccountBalance;
@@ -29,19 +25,19 @@ public class Account {
         
     }
 
-    //To String method to display user information
+    //To String method
      public String toString(){
         return "Account Number: "+AccountNumber+" of "+AccountName+" has balance $"+AccountBalance;
     }
      
     
-     //Used getter to get Account number
+     // getter (Account Number)
      public String getAccountNumber() {
         return AccountNumber;
     }
 
      
-    //Setter method toverify Account Number 
+    //Setter  (Account Number) 
     public boolean setAccountNumber(String AccountNumber) {
         
         if(AccountNumber.matches("[a-zA-Z0-9]*"))
@@ -52,14 +48,14 @@ public class Account {
         
         else{
         
-            throw new IllegalArgumentException("Please Correct The Account Number");
+            throw new IllegalArgumentException("It is requested that please correct The Account Number");
              
         }
        
     }
 
     
-    //Getter Method for Account Balance
+    //Getter (Account Balance)
     public double getAccountBalance() {
         return AccountBalance;
     }
@@ -72,7 +68,7 @@ public class Account {
         
         if(AccountBalance <0)
                 {
-                    throw new IllegalArgumentException("Please enter valid Balance") ;
+                    throw new IllegalArgumentException("Please enter the valid Balance") ;
                 }
         else{
            this.AccountBalance=AccountBalance;
@@ -80,7 +76,7 @@ public class Account {
     }
 
     
-    //Getter Method for Account Name
+    //Getter (Account Name)
     public String getAccountName() {
         return AccountName;
     }
